@@ -40,146 +40,126 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.samice</avrtool>
-    <avrtoolserialnumber>36310083</avrtoolserialnumber>
-    <avrdeviceexpectedsignature>0x60060300</avrdeviceexpectedsignature>
-    <avrtoolinterface>SWD</avrtoolinterface>
-    <com_atmel_avrdbg_tool_samice>
-      <ToolOptions>
-        <InterfaceProperties>
-          <SwdClock>4000000</SwdClock>
-        </InterfaceProperties>
-        <InterfaceName>SWD</InterfaceName>
-      </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
-      <ToolNumber>36310083</ToolNumber>
-      <ToolName>J-Link</ToolName>
-    </com_atmel_avrdbg_tool_samice>
-    <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <ArmGcc>
-        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
-        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
-        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
-        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
-        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
-        <armgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>SAMD51</Value>
-            <Value>NDEBUG</Value>
-          </ListValues>
-        </armgcc.compiler.symbols.DefSymbols>
-        <armgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-            <Value>../inc</Value>
-            <Value>../inc/preprocessor</Value>
-            <Value>../boards/grandcentral_m4</Value>
-            <Value>../scripts</Value>
-            <Value>..</Value>
-          </ListValues>
-        </armgcc.compiler.directories.IncludePaths>
-        <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
-        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
-        <armgcc.compiler.miscellaneous.OtherFlags>False</armgcc.compiler.miscellaneous.OtherFlags>
-        <armgcc.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </armgcc.linker.libraries.Libraries>
-        <armgcc.linker.libraries.LibrarySearchPaths>
-          <ListValues>
-            <Value>../scripts</Value>
-          </ListValues>
-        </armgcc.linker.libraries.LibrarySearchPaths>
-        <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-        <armgcc.linker.memorysettings.ExternalRAM>False</armgcc.linker.memorysettings.ExternalRAM>
-        <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
-        <armgcc.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-          </ListValues>
-        </armgcc.assembler.general.IncludePaths>
-        <armgcc.preprocessingassembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-          </ListValues>
-        </armgcc.preprocessingassembler.general.IncludePaths>
-      </ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>SAMD51</Value>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+      <Value>../inc</Value>
+      <Value>..</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -Wno-overflow -Wno-pointer-sign</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM>False</armgcc.linker.memorysettings.ExternalRAM>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <ArmGcc>
-        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
-        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
-        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
-        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
-        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
-        <armgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>SAMD51</Value>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </armgcc.compiler.symbols.DefSymbols>
-        <armgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-            <Value>../inc</Value>
-            <Value>../inc/preprocessor</Value>
-            <Value>../boards/grandcentral_m4</Value>
-            <Value>../scripts</Value>
-            <Value>..</Value>
-          </ListValues>
-        </armgcc.compiler.directories.IncludePaths>
-        <armgcc.compiler.optimization.level>Optimize debugging experience (-Og)</armgcc.compiler.optimization.level>
-        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
-        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
-        <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -Wno-overflow -Wno-pointer-sign</armgcc.compiler.miscellaneous.OtherFlags>
-        <armgcc.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </armgcc.linker.libraries.Libraries>
-        <armgcc.linker.libraries.LibrarySearchPaths>
-          <ListValues>
-            <Value>../scripts</Value>
-          </ListValues>
-        </armgcc.linker.libraries.LibrarySearchPaths>
-        <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-        <armgcc.linker.memorysettings.ExternalRAM />
-        <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
-        <armgcc.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-          </ListValues>
-        </armgcc.assembler.general.IncludePaths>
-        <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
-        <armgcc.preprocessingassembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-          </ListValues>
-        </armgcc.preprocessingassembler.general.IncludePaths>
-        <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
-      </ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>SAMD51</Value>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+      <Value>../inc</Value>
+      <Value>..</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize debugging experience (-Og)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -Wno-overflow -Wno-pointer-sign</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM>False</armgcc.linker.memorysettings.ExternalRAM>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
     </ToolchainSettings>
-    <UsesExternalMakeFile>False</UsesExternalMakeFile>
-    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <BuildTarget>all</BuildTarget>
-    <CleanTarget>clean</CleanTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="boards\grandcentral_m4\board_config.h">
+    <Compile Include="Device_Startup\startup_samd51.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_samd51.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\board_config.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="inc\cdc_enumerate.h">
@@ -192,21 +172,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="inc\neopixel.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\mrecursion.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\mrepeat.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\preprocessor.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\stringz.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\tpaste.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="inc\sam_ba_monitor.h">
@@ -222,6 +187,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="inc\uf2hid.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\uf2_version.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="inc\usart_sam_ba.h">
@@ -240,9 +208,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="lib\usb_msc\usb_protocol_msc.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="scripts\uf2_version.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\cdc_enumerate.c">
@@ -275,9 +240,6 @@
     <Compile Include="src\screen.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\startup_samd51.c">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\uart_driver.c">
       <SubType>compile</SubType>
     </Compile>
@@ -289,17 +251,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="boards\grandcentral_m4" />
+    <Folder Include="Device_Startup\" />
     <Folder Include="inc" />
-    <Folder Include="inc\preprocessor" />
     <Folder Include="lib" />
     <Folder Include="lib\usb_msc" />
-    <Folder Include="boards" />
-    <Folder Include="scripts" />
     <Folder Include="src" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="scripts\samd51p20a_flash.ld">
+    <None Include="Device_Startup\samd51p20a_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\samd51p20a_sram.ld">
       <SubType>compile</SubType>
     </None>
     <None Include="src\sketch.cpp">
