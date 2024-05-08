@@ -194,21 +194,6 @@
     <Compile Include="inc\neopixel.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="inc\preprocessor\mrecursion.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\mrepeat.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\preprocessor.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\stringz.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="inc\preprocessor\tpaste.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="inc\sam_ba_monitor.h">
       <SubType>compile</SubType>
     </Compile>
@@ -291,7 +276,6 @@
   <ItemGroup>
     <Folder Include="boards\grandcentral_m4" />
     <Folder Include="inc" />
-    <Folder Include="inc\preprocessor" />
     <Folder Include="lib" />
     <Folder Include="lib\usb_msc" />
     <Folder Include="boards" />
