@@ -705,9 +705,6 @@
     <None Include="scripts\samd51j19a.ld">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\sketch.cpp">
-      <SubType>compile</SubType>
-    </None>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
